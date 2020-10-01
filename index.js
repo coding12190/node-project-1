@@ -4,8 +4,8 @@ const Datastore=require("nedb");
 const db=new Datastore("./data.db");
 const fetch=require("node-fetch");
 db.loadDatabase();
-const port = process.env.PORT || 2000;
-app.listen(port,()=>console.log("Server started at port 2000..."));
+const port = process.env.PORT || 4000; //Please save other confidential keys in .env file
+app.listen(port,()=>console.log("Server started at port 4000"));
 app.use(express.static("Files"));
 app.use(express.json());
 
