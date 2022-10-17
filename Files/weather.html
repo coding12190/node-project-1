@@ -37,7 +37,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         .then(data=>{
             const array=data.results;
             array.forEach(element => {
-                const city=element.city;
+                const {city}=element;
                 document.getElementById("selectField").innerHTML+=`<option value="${city}">${city}</option>`;
             });
         })
